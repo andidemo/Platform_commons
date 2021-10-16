@@ -1,0 +1,18 @@
+<div class="container bg-success">
+<h3>
+    Parent Component
+</h3>
+</div>
+<div class="container">
+    <select class="select_box"  (change)="selectChange($event)">
+        <option value="" disabled selected>Select your name.!</option>
+        <option [value]="item.id" *ngFor="let item of parentData">
+            {{item.name}}
+        </option>
+    </select>
+</div>
+
+<div class="container err_msg">
+    <p *ngIf="nodata">{{nodata}}</p>
+
+</div>

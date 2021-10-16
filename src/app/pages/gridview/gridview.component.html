@@ -1,0 +1,10 @@
+
+<div class="container head_title">
+<h1 class="text-center">Platform Commons Machine Task</h1>
+</div>
+<div class="container">
+    <app-parent (msgToSibling)="getdata($event)" [parentdata]="nodata"></app-parent>
+</div>
+<div class="container">
+    <app-child [data]="childata" (msgToparent)="getnodata($event)"></app-child>
+</div>
